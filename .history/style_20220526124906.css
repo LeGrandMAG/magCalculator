@@ -1,16 +1,12 @@
 body{
     margin:auto;
     align-items: center;
-    text-align: center;
+    text-align: ;
 }
 .container{
     margin:auto;
+    background: red;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.form-elem{
-    margin-top: 10;
-    margin-bottom: 10;
 }
