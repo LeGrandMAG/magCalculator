@@ -1,7 +1,0 @@
-
-
-function myFunction(){
-        document.getElementById('okay').innerHTML = "doll"
-
-        const love = document
-}
