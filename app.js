@@ -5,19 +5,41 @@ let p;
 let xValue;
 let s;
 let number;
-let input = document.getElementById('tt');
-let d;
-let e;
-let doc = document.getElementById('result');
+
 
 function print(){
+        let doc = document.getElementById('result');
         doc.innerHTML = '';
         x = document.getElementById('tt');
         p = document.createElement('p')
+        number = document.createElement('p')
+        
+
         xValue = x.value;
         if (xValue){
                 p.innerText = xValue
         }
+        doc.appendChild(p)
+        doc.append(number)
+        p.style = 'font-weight:bold; font-size:50px; margin-top:50px';
+}
+function colorChange(){
+        s = p.innerText
+        let n =/\w+/g
+        number.innerText = s.match(n).length;
+        if (s.match(n).length >=10){
+                p.style.color ='red';
+                console.log(s.match(n))
+                
+        }
+}
+function render (){
+        document.getElementById('tt').addEventListener('keyup', print)
+        document.getElementById('tt').addEventListener('keyup', colorChange)
+}
+render()
+function myFunction(){
+        let doc = document.getElementById('result');
         u = doc.appendChild(p)
         u.id = "love"
         console.log(result)
@@ -47,6 +69,15 @@ function myFunction(){
         p.style = 'font-weight:bold; font-size:50px; margin-top:50px'
         x.value = ''
 }
+
+
+function add(){
+        let p = document.getElementById('tt');
+        let d =parseInt(p.value)
+        if (d>=0){
+                result += d;
+                p.value =''
+                console.log(result)
 */
 
 
@@ -61,6 +92,11 @@ function add(){
         else{
                 alert("please enter a number")
         }
+}
+
+function sub(){
+        let p = document.getElementById('tt');
+        let d =parseInt(p.value)
         console.log(list)
         console.log(result)
         
@@ -75,6 +111,9 @@ function sub(){
                 }
                 else{
                         result -= d;
+                }
+                p.value =''
+                console.log(result)
                         
                 }
                 o.style.color ='green'
@@ -83,6 +122,7 @@ function sub(){
         else{
                 alert("please enter a number")
         }
+}
         console.log(list)
         console.log(result)
 }
