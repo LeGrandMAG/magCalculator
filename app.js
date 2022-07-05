@@ -55,6 +55,12 @@ function flush(){
         input.value = ''
 }
 render()
+
+
+
+
+
+
 /*
 function myFunction(){
         doc.innerHTML = '';
@@ -115,17 +121,15 @@ function sub(){
                 p.value =''
                 console.log(result)
                         
-                }
                 o.style.color ='green'
                 input.value =''
-        }
+                }
+        
         else{
                 alert("please enter a number")
         }
 }
-        console.log(list)
-        console.log(result)
-}
+
 
 function equals(){
         console.log(input.value)
@@ -147,3 +151,8 @@ function del(){
         o.innerText = result
         o.style.color = 'black'
 }
+let data = fetch('https://dummyjson.com/products')
+.then(res => res.json())
+
+
+console.log(data)
